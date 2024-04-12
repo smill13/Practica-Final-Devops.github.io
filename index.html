@@ -9,13 +9,45 @@
         width: 100px;
         height: 100px;
         background-color: blue;
+        animation: desplazamiento 3s ease infinite alternate; /* Aplica la animación */
+        border-radius: 50%;
+        box-shadow: 5px 5px 5px gray;
+    }
+
+    @keyframes desplazamiento {
+        0% { transform: translateY(0); } /* Estado inicial */
+        100% { transform: translateY(50px); } /* Estado final */
+    }
+
+    h1 {
+        animation: color-change 3s linear infinite; /* Animación de cambio de color para el texto */
+    }
+
+    @keyframes color-change {
+        0% { color: red; }
+        20% { color: orange; }
+        40% { color: yellow; }
+        60% { color: green; }
+        80% { color: blue; }
+        100% { color: silver; }
+    }
+
+    body {
+        display: flex;
+        background-color: #28E7DB;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
     }
 </style>
 </head>
 <body>
     <h1>Hola mundo</h1>
 
-    <h1>La prueba unitaria prueba si este cuadro es azul</h1>
+    <h1>La prueba unitaria verifica si la figura es azul</h1>
 <div id="cuadro"></div>
 
 <script>
