@@ -3,19 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prueba Unitaria de Color</title>
+<title>Prueba de Color de Cuadro</title>
 <style>
-  #cuadro {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-  }
+    #cuadro {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
 </style>
 </head>
 <body>
-
 <div id="cuadro"></div>
 
-<script src="prueba_unitaria.js"></script>
+<script>
+    // Esta función comprueba el color del cuadro
+    function comprobarColorCuadro() {
+        var cuadro = document.getElementById('cuadro');
+        var color = window.getComputedStyle(cuadro).getPropertyValue('background-color');
+        return color === 'rgb(0, 0, 255)';
+    }
+</script>
 </body>
 </html>

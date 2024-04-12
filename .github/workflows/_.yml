@@ -1,20 +1,21 @@
-name: Run Unit Tests
+# .github/workflows/prueba-unitaria.yml
+name: Prueba Unitaria
 
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run unit tests
-        run: npm test
+    - name: Checkout del código
+      uses: actions/checkout@v2
+      
+    - name: Instalar dependencias
+      run: npm install
+      
+    - name: Ejecutar prueba unitaria
+      run: node prueba.js
