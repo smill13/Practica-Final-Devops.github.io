@@ -1,4 +1,3 @@
-# .github/workflows/prueba-unitaria.yml
 name: Prueba Unitaria
 
 on:
@@ -22,5 +21,3 @@ jobs:
 
       - name: Run unit tests
         run: npm test
-
-  
