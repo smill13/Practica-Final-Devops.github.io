@@ -11,11 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout del código
-      uses: actions/checkout@v2
-      
-    - name: Instalar dependencias
-      run: npm install
-      
-    - name: Ejecutar prueba unitaria
-      run: prueba_unitaria.test.js
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install jest
+        run: npm install jest --save-dev
+
+      - name: Run unit tests
+        run: npm test
+
+  
