@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prueba de Color de Cuadro</title>
+<style>
+    #cuadro {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+</style>
 </head>
 <body>
-    <h1>Hola mundo</h1>
+<div id="cuadro"></div>
+
+<script>
+    // Esta función comprueba el color del cuadro
+    function comprobarColorCuadro() {
+        var cuadro = document.getElementById('cuadro');
+        var color = window.getComputedStyle(cuadro).getPropertyValue('background-color');
+        return color === 'rgb(0, 0, 255)';
+    }
+</script>
 </body>
 </html>
